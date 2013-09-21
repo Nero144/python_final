@@ -1,0 +1,68 @@
+COMP 112 Final Project:  Oren Finard
+
+Score: 19/20
+
+Ambition:  3/3
+
+How ambitious was the intended final product, based on the prospectus,
+documentation, and/or discussions with me?  Did you achieve all of
+the goals?
+
+The project outlined is an ambitious one, using sophisticated
+image analysis techniques along with ideas for optimizing those techniques.
+You have gone beyond the original idea, implementing *two* circle-detection
+algorithms.  You also describe and implement a very nice approach to
+minimizing the computation for the HT.  Also looks like you implemented
+some extra functionality.
+
+Documentation:  2.5/3
+
+Clarity, completeness, etc.  Describes how to use the program.  Has
+code overview, addresses issues and extensions.
+
+Documentation is solid.  Clearly describes theoretical basis for
+both algorithms, and gives reference material for the one that
+we did not discuss together.  Describes how to use the program and
+extensions.  Would have liked a bit of comparison between the two
+algorithms.
+
+Usability:  4/4
+
+Does the program run as expected?  Are there any bugs that occur
+when I am using it, or strange unexplained behavior?  How friendly
+is the user interface or function signatures, as appropriate?
+
+The program runs as expected.  Presumably the information provided
+is in the pixel coordinate system, not the real-world system.
+Would have been helpful to have more files to try this out on, as
+I don't quite have time to make many pictures myself.  But it looks
+like the HT works better on the supplied pic08.bmp than the
+LSC algorithm, even though the former only hits <10% of the actual
+pixels.
+
+Coding:  9/10
+
+How complex is the coding task and the actual coding?  Does the
+code demonstrate knowledge of things (modules, techniques, etc.)
+not covered in class?  Is the coding well-done?  Is the code
+appropriately broken into functions?  Functions documented?
+Appropriate data types used?  Appropriate algorithms?
+
+The difficulty in the coding task is going from the sketch of the
+algorithm to the actual code.  The code clearly demonstrates that
+you have learned how to make that transition.
+
+The code could be a bit cleaner.  There are many very long lines that
+should be broken up, and some commented out "scratch work" that shouldn't
+be part of a final product.  Some comments around various code blocks
+inside functions would be helpful; even knowing the HT myself, it isn't
+so obvious to me reading your code where the voting is occurring.
+I think that's because of the optimizations you are making, which
+might be getting mixed up a bit with the HT itself.
+
+I think your functions could probably be separated out differently.
+You have a function that both performs the HT analysis, and modifies
+the image; this should probably be separate functions, so that you don't
+always have to modify an image if all you want is the information about
+the BFC.
+
